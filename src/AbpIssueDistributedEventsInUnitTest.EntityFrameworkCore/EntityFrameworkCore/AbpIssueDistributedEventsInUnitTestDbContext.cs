@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AbpIssueDistributedEventsInUnitTest.Issue22053.MyAggregates;
+using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
@@ -53,6 +54,8 @@ public class AbpIssueDistributedEventsInUnitTestDbContext :
 
     #endregion
 
+    public DbSet<MyAggregate> MyAggregates { get; set; }
+
     public AbpIssueDistributedEventsInUnitTestDbContext(DbContextOptions<AbpIssueDistributedEventsInUnitTestDbContext> options)
         : base(options)
     {
@@ -75,6 +78,8 @@ public class AbpIssueDistributedEventsInUnitTestDbContext :
         builder.ConfigureTenantManagement();
 
         /* Configure your own tables/entities inside here */
+
+        builder.ConfigureMyAggregate();
 
         //builder.Entity<YourEntity>(b =>
         //{
