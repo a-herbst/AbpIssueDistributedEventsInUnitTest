@@ -1,0 +1,9 @@
+﻿using AbpIssueDistributedEventsInUnitTest.EntityFrameworkCore;
+using Xunit;
+
+namespace AbpIssueDistributedEventsInUnitTest.EntityFrameworkCore;
+
+public class AbpIssueDistributedEventsInUnitTestEntityFrameworkCoreCollectionFixtureBase : ICollectionFixture<AbpIssueDistributedEventsInUnitTestEntityFrameworkCoreFixture>
+{
+
+}

@@ -1,0 +1,10 @@
+using AbpIssueDistributedEventsInUnitTest.Samples;
+using Xunit;
+
+namespace AbpIssueDistributedEventsInUnitTest.EntityFrameworkCore.Domains;
+
+[Collection(AbpIssueDistributedEventsInUnitTestTestConsts.CollectionDefinitionName)]
+public class EfCoreSampleDomainTests : SampleDomainTests<AbpIssueDistributedEventsInUnitTestEntityFrameworkCoreTestModule>
+{
+
+}

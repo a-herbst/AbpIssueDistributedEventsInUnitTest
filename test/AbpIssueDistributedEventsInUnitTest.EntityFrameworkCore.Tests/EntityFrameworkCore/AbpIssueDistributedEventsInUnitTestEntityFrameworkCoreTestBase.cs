@@ -1,0 +1,8 @@
+﻿using Volo.Abp;
+
+namespace AbpIssueDistributedEventsInUnitTest.EntityFrameworkCore;
+
+public abstract class AbpIssueDistributedEventsInUnitTestEntityFrameworkCoreTestBase : AbpIssueDistributedEventsInUnitTestTestBase<AbpIssueDistributedEventsInUnitTestEntityFrameworkCoreTestModule>
+{
+
+}
