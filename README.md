@@ -2,7 +2,16 @@
 
 ## About this solution
 
-This is a layered startup solution based on [Domain Driven Design (DDD)](https://docs.abp.io/en/abp/latest/Domain-Driven-Design) practises. All the fundamental ABP modules are already installed. 
+Sample solution demonstrating that distributed events that are sent within the same unit of work
+arrive in another order at the event handler when mixing
+
+- IDistributedEventBus.PublishAsync()
+- with BasicAggregateRoot.AddDistributedEvent()
+
+See
+- [ABP Issue #22053](https://github.com/abpframework/abp/issues/22053)
+- failing unit test at test/AbpIssueDistributedEventsInUnitTest.EntityFrameworkCore.Tests/EntityFrameworkCore/Issue22053/DomainServices/MyDomainServiceTest.cs
+
 
 ### Pre-requirements
 
